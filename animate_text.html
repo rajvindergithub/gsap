@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>Example Title</title>
+    <meta name="author" content="Your Name">
+    <meta name="description" content="Example description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <link rel="icon" type="image/x-icon" href="" />
+    
+
+</head>
+
+<style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    #main {
+        height: 100vh;
+        width: 90%;
+        max-width: 100%;
+        margin: auto;
+        font-family: 'Poppins';
+        display: flex;
+        align-items: center; 
+        justify-content: center; 
+    }
+
+    body {
+        background-color: #111; 
+        height: 100vh; 
+    }
+
+    h1{ font-size: 6rem; color: #FFF; font-weight: 300;   }
+    .animateText span{ display: inline-block; }
+</style>
+
+<body>
+
+    <div id="main">
+        <h1 class="animateText">MyFreeOnlneTools</h1>
+    </div>
+
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/gsap.min.js" integrity="sha512-Qrpii3NEFZ02RN6ZqpTu6pS/5PEq7EzBYJLki3AKBd8IncrlAwQdZHzExYwS0+b1NM0/qfxI1GOhqWLVosocDA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/ScrollTrigger.min.js" integrity="sha512-HemPoJ+m4KR4XM3VY+N58XFYN7qdXuR0elHeVYGJBJ6LYC+xoeHodEpwiN5JxXLyvA+sRd7/FJ6w6lz5IkANNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script type="text/javascript">
+    
+    var text = document.querySelector('h1');
+    
+    var arrayString = text.textContent.split("");
+    
+    var arrayHalf = arrayString.length / 2; 
+    
+    var jointText = "";
+    
+    console.log(arrayString,  arrayHalf);
+ 
+    arrayString.forEach(function(data, idx){
+        
+        if(idx < arrayHalf){
+            jointText += `<span class="leftText">${data}</span>`;
+        }else{
+            jointText += `<span class="rightText">${data}</span>`;
+        }
+        
+        
+       
+        
+    });
+    
+     console.log(jointText);
+    
+    text.innerHTML = jointText;
+ 
+    
+    gsap.from('.leftText' , {
+        y: 100,
+        duration: 0.5,
+        delay: 1, 
+        stagger: 0.15, 
+        opacity: 0, 
+         repeat: -1,
+          yoyo: true, 
+        repeatDelay: 2
+        
+    });
+    
+        gsap.from('.rightText' , {
+        y: 100,
+        duration: 0.5,
+        delay: 1, 
+        stagger: -0.15, 
+            opacity: 0, 
+             repeat: -1, 
+              yoyo: true,
+            repeatDelay: 2
+            
+    });
+    
+</script>
+
+
+
+</html>

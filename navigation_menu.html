@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>Example Title</title>
+    <meta name="author" content="Your Name">
+    <meta name="description" content="Example description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <link rel="icon" type="image/x-icon" href="" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+
+
+</head>
+
+<style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    #main {
+        height: 100vh;
+        width: 90%;
+        max-width: 100%;
+        margin: auto;
+        font-family: 'Poppins';
+    }
+
+    body {
+        background-image: url('https://images.unsplash.com/photo-1772289935663-80aa987be656?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        background-position: center center;
+        background-size: cover;
+        overflow-x: hidden; 
+    }
+
+
+    #cursor {
+        height: 20px;
+        width: 20px;
+        background-color: #FFFFFF;
+        border-radius: 50%;
+        position: fixed;
+        z-index: 9
+    }
+
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 0px ;
+        
+    }
+
+    #nav h2 {
+        font-weight: 400;
+        color: #FFF;
+    }
+
+    #nav i {
+        color: #FFF;
+        font-size: 1.75rem;
+        font-weight: 700;
+    }
+
+    #full {
+        height: 100%;
+        width: 40%;
+        
+        position: absolute;
+        background: rgba(0, 0, 0, 0.45);
+        top: 0px;
+        right: -40%;
+        backdrop-filter: blur(10px);
+    }
+
+    .nav_menu {
+        list-style: none;
+        font-family: 'Poppins';
+        font-size: 3rem;
+        color: #000;
+        font-weight: 200;
+        line-height: 5rem;
+        margin-left: 50px;
+        margin-top: 40px; 
+    }
+
+    
+    .nav_menu li{ position: relative;  }
+    .nav_menu li a {
+        text-decoration: none;
+        color: #FFF;
+    }
+    
+    .nav-close-icon{ color: #FFF; }
+    
+    .nav_menu i{ position: absolute; top: 5%; right: 10%; cursor: pointer; }
+    
+    .menu-icon{ cursor: pointer; }
+    
+</style>
+
+<body>
+
+    <div id="main">
+        <div id="nav">
+            <h2>MyFreeOnlineTools</h2>
+            <i class="ri-menu-3-line menu-icon" onclick="openMenu(); "></i>
+        </div>
+        <div id="full">
+            <div class="nav_menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Location</a></li>
+                <i class="ri-close-large-line nav-close-icon" onclick="closeMenu(); "></i>
+                
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/gsap.min.js" integrity="sha512-Qrpii3NEFZ02RN6ZqpTu6pS/5PEq7EzBYJLki3AKBd8IncrlAwQdZHzExYwS0+b1NM0/qfxI1GOhqWLVosocDA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/ScrollTrigger.min.js" integrity="sha512-HemPoJ+m4KR4XM3VY+N58XFYN7qdXuR0elHeVYGJBJ6LYC+xoeHodEpwiN5JxXLyvA+sRd7/FJ6w6lz5IkANNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script type="text/javascript">
+    
+
+
+    var tl = gsap.timeline( ); 
+    
+        tl.to('#full', {
+            right: 0,
+            duration: 0.4
+        });  
+    
+        tl.from( '.nav_menu li',  {
+            left: 150, 
+            duration: 0.6,
+            stagger: 0.1,
+            opacity:0
+        });
+    
+        tl.from('.nav-close-icon', {
+            opacity: 0
+        }, "-=0.5")
+
+    tl.pause(); 
+    
+    function openMenu(){
+         tl.play(); 
+    }
+    
+    function closeMenu(){
+         tl.reverse(); 
+        
+    }
+    
+</script>
+
+
+
+</html>
