@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Valley+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    overflow-x: hidden;
+    background: #EFEAE3;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.layout-padding {
+    margin: 1vw 3vw;
+}
+
+nav ul {
+    display: flex;
+    column-gap: 15px;
+    list-style: none;
+}
+
+nav ul li {
+    overflow: hidden;
+    padding: 12px 0px;
+}
+
+
+nav ul li a {
+    padding: 10px 20px;
+    border: 1px solid #0000009c;
+    border-radius: 25px;
+    font-family: 'Google Sans';
+    color: #0000009c;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all ease 0.25s;
+    overflow: hidden;
+}
+
+nav ul li a::after {
+    content: "";
+    background-color: #000;
+    position: absolute;
+    bottom: -110%;
+    height: 105%;
+    width: 100%;
+    left: 0%;
+    right: 100%;
+    border-radius: 50%;
+    z-index: -1;
+    transition: all ease 0.25s;
+}
+
+nav ul li a:hover::after {
+    bottom: 0%;
+    border-radius: 20px;
+
+}
+
+nav ul li:hover a {
+    color: #FFF;
+}
+
+
+#hero {
+    font-family: 'Google Sans';
+    color: #000;
+    letter-spacing: -1px;
+    height: 65vh;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 2vw;
+    margin-bottom: 2vw;
+}
+
+#hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#hero .right-hero h3 {
+    font-size: 1.65vw;
+    width: 24vw;
+    font-weight: 700;
+    line-height: 1.65vw;
+}
+
+#hero .left-hero h2 {
+    font-size: 8vw;
+    width: 40vw;
+    text-align: right;
+    font-weight: 900;
+    line-height: 6.5vw;
+}
+
+.vss_video {
+    z-index: 2;
+}
+
+#video_section_second {
+    position: relative;
+    height: 120vh;
+    z-index: 0;
+}
+
+#video_section_second video {
+    width: 100%;
+
+}
+
+.vss_video video {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    position: relative;
+}
+
+
+#video_orange_cir {
+    height: 35vw;
+    width: 45vw;
+    position: absolute;
+    top: -6.5vw;
+    right: -5vw;
+    z-index: -1;
+
+}
+
+
+#video_orange_child_one {
+    width: 100%;
+    height: 100%;
+    background-color: orangered;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+
+    filter: blur(30px);
+    position: absolute;
+}
+
+#video_orange_child_two {
+    width: 30vw;
+    height: 30vw;
+    background-color: orangered;
+    border-radius: 50%;
+    filter: blur(30px);
+    position: absolute;
+    z-index: 4;
+    animation: anime1 3s linear infinite alternate;
+}
+
+
+#video_orange_child_three {
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    background-color: orangered;
+    filter: blur(30px);
+    position: absolute;
+    animation: anime1 6s linear infinite alternate;
+    background: linear-gradient(#FE320A, #fe570a);
+    z-index: 4;
+}
+
+@keyframes anime1 {
+    from {
+        transform: translate(55%, -3%);
+    }
+
+    to {
+        transform: translate(30%, -30%);
+    }
+}
+
+
+@keyframes anime2 {
+    from {
+        transform: translate(5%, 5%);
+    }
+
+    to {
+        transform: translate(0%, 10%);
+    }
+}
+
+
+#moving-text .con h3 {
+    font-family: 'Google Sans';
+    color: #000;
+    font-size: 10rem;
+    text-transform: uppercase;
+}
+
+.con .circle {
+    background-color: orangered;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: relative;
+    top: -20px;
+}
+
+.con {
+    white-space: nowrap;
+    display: inline-block;
+    animation: moving_fold_two 30s linear infinite;
+}
+
+.con div {
+    display: inline-block;
+    margin: 0px 10px;
+}
+
+#moving-text {
+    overflow-x: hidden;
+    white-space: nowrap;
+    padding: 9vh 0vh;
+}
+
+
+@keyframes moving_fold_two {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#section_thrid {
+    padding: 10vh 0vh;
+    height: 80vh; 
+}
+
+#section_thrid .sec_thrid_left h3 {
+    font-family: 'Google Sans';
+    color: #000;
+    font-size: 3rem;
+    letter-spacing: -2px;
+    line-height: 3rem; 
+}
+
+#section_thrid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; padding-bottom: 10vh; 
+}
+
+.s_th_r_r_para p {
+    font-family: 'Google Sans';
+    color: #000;
+    letter-spacing: -1px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.sec_th_r_rap {
+    padding: 1.5rem;
+    border-radius: 10px;
+    background-color: #FFF;
+}
+
+.s_th_r_rap_img img {
+    border-radius: 10px;
+    width: 100%;
+    height: 175px;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.sec_thrid_left {
+    width: 42vw;
+}
+
+.sec_thrid_right {
+    width: 20vw;
+    position: relative;
+    top: 10vw;
+    margin-right: 5vw; 
+}
+
+.sec_thrid_left{ position: relative; z-index: 4;  }
+
+.sec_third_circle_first {
+    height: 25vw;
+    width: 25vw;
+    background: linear-gradient(#FE320A, #fe570a);
+    border-radius: 50%; 
+    filter: blur(30px);   
+    position: absolute; left: 20vw; 
+    top: 5vw; z-index: -1;   
+}
+
+.sec_third_circle_two {
+    width: 25vw;
+    height: 25vw;
+    background-color: #FE320A;
+     border-radius: 50%; 
+     filter: blur(30px);
+    position: absolute; 
+    left: 20vw; 
+    top: 7.5vw;  z-index: -1;   
+}
+
+
+.heading_fec_sec h3{
+     font-family: 'Google Sans'; text-transform: uppercase; font-size: 18px;  font-weight: 400; 
+}
+
+.heading_fec_sec{ margin-bottom: 12vh;  }
+
+.fec_sec_left h3{ font-size: 3rem; font-family: 'Google Sans'; text-transform: capitalize;  }
+.fec_sec_right h4{ font-size: 1.5rem; font-family: 'Google Sans'; font-weight: 300; text-transform: uppercase; text-align: right;  }
+#fecture_section{ padding-bottom: 10vh; }
+.fec_sec_right p{ font-size: 0.85rem;  font-family: 'Google Sans';  color: #00000090; font-weight: 300; text-align: right; text-transform: capitalize; }
+
+
+.fecture_sec_row{ display: flex; justify-content: space-between; align-items: center; padding: 7vh 0vh; border-bottom: 1px solid #ccc;  }
+
+.heading_fec_sec h3{ position: relative; padding-left:  35px;  }
+
+.heading_fec_sec h3::before{ position: absolute; left: 0px; top: -4px; background-color: orangered; content: ""; height: 25px; width: 25px; border-radius: 50%;  }
+ 
