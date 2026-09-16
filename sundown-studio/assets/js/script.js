@@ -1,4 +1,15 @@
+jQuery('.header_menu_icon').click(function(){
+ 
+    jQuery('.full_black').css({'height':'100vh'});
+    jQuery('.mobile-menu').css({'top':'0vh'}); 
+});
 
+jQuery('.mobile-menu-close').click(function(){
+    
+     jQuery('.full_black').css({'height':'0vh'});
+    jQuery('.mobile-menu').css({'top':'-100vh'}); 
+    
+});
 
 jQuery('.fecture_sec_row_main').mouseenter(function(){
    jQuery('.feature_img').fadeIn();
@@ -43,31 +54,29 @@ var swiper = new Swiper('.who_we_wk_main', {
         spaceBetween: 30,
          slidesOffsetBefore: 50,
          slidesOffsetAfter: -40,
+        breakpoints: {
+        0: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+             slidesOffsetBefore: 0,
+         slidesOffsetAfter: 0,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+             slidesOffsetBefore: 0,
+         slidesOffsetAfter: 0,
+        },
+        1024: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+             slidesOffsetBefore: 0,
+         slidesOffsetAfter: 0,
+        }
+    }
+    
         
       });
 
 
-
-
-//const scroll = new LocomotiveScroll({
-//    el: document.querySelector("#main"),
-//    smooth: true
-//});
-
-
-//jQuery(window).on('scroll', function () {
-//
-// var scrollTop = $(window).scrollTop() + 200;
-//
-//    var featureTop = jQuery('#fecture_section').offset().top;
-//    var featureBottom = featureTop + jQuery('#fecture_section').outerHeight() - 100 ;
-//
-//    if (scrollTop >= featureTop && scrollTop < featureBottom) {
-//        jQuery('.feature_img').show();
-//    } else {
-//        jQuery('.feature_img').hide();
-//    }
-//    
-//    
-//    
-//});
+ 

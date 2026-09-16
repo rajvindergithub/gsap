@@ -507,7 +507,7 @@ nav ul li:hover a {
     padding-top: 3vh;
     padding-left: 2vw;
     padding-right: 2vw;
-    margin-top: 10vh; 
+    margin-top: 10vh;  
 }
 
 
@@ -601,12 +601,13 @@ nav ul li:hover a {
     border: none;
     text-transform: capitalize;
     font-weight: 600;
+    border-radius: 10px; 
 }
 
 
 .footer_heading_shadow h2 {
     font-size: 25vw;
-    color: #FFF;
+    color: #FFF; position: relative; z-index: 2; 
 }
 
 
@@ -622,5 +623,107 @@ nav ul li:hover a {
     align-items: center;
     padding: 1.5rem 0rem;
     border-top: 2px solid #FFF;
+    position: relative; z-index: 3; 
 }
+
+.mobile-nav-main{ font-family: 'Google Sans'; font-size: 1rem;  }
+
+.header_menu_icon{     padding: 10px 10px;  
+    border: 1px solid #0000009c;
+    border-radius: 25px;
+    font-family: 'Google Sans';
+    color: #0000009c;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all ease 0.25s;
+    overflow: hidden; color: #0000009c;  }
+
+.header_menu_icon i{ margin-right: 5px; }
+ 
+.mobile-nav-main{ display: flex; justify-content: space-between; align-items: center; padding: 3vw;  }
+.mobile-menu-nav ul{ list-style: none; }
+.mobile-menu-nav ul li{ margin-bottom: 2vh; margin-top: 2vh;  }
+.mobile-menu-nav ul li a{ color: #000000; font-family: 'Google Sans'; font-size: 2rem; text-decoration: none; }
+
+
+.mobile-menu{ padding: 6vw 4vw; background-color: #FFF; border-radius: 0px 0px 25px 25px; text-align: right; position: fixed; top: -100vh;  z-index: 9; left: 0px; right: 0px; z-index: 999; transition: all 1s ease-in-out; box-shadow: 0px 10px 0px rgba(0,0,0,0.75)  }
+
+.mobile-menu-close i{ font-size: 1.5rem; font-weight: 300; color: #000000;   }
+
+.mobile-menu-close{ font-family: 'Google Sans' !important;  font-size: 1.5rem; display: inline-flex; align-items: center; justify-content: flex-end; border: 1px solid #0000009c; padding: 0.25rem 0.5rem; border-radius: 30px; color: #000000;    }
+
+.full_black{ background-color: #00000080; position: fixed; top: 0px; width: 100vw; height: 0vh;    backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); z-index: 99; transition: all 1s ease-in-out; border-radius: 0px 0px 30px 30px;  }
+ 
+.mobile-menu-close i{ margin-right: 5px; }
+ 
+
+@media (max-width: 768px) {
+    
+    header{ display: none; }
+    
+    nav{ display: none; }
+    #hero{ flex-direction: column-reverse; height: auto; padding: 3vw;  }
+    #hero .left-hero h2{   font-size: 15vw; line-height: 15vw; width: 55vw;  }
+    #video_orange_cir{ display: none; }
+    #hero .right-hero h3{  font-size: 1.5rem; margin-top: 4vh; margin-bottom: 4vh;  
+        line-height: 1.75rem;
+        width: 80%;
+        margin-right: auto;
+        max-width: 100%;
+ }
+    
+    .vss_video{ margin-top: 5vh; } 
+    
+    #video_section_second{ height: auto; }
+    
+    #moving-text .con h3{ font-size: 2rem; }
+    
+    .con .circle {
+    background-color: orangered;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    position: relative;
+    top: -5px;
+}
+    
+  .con div {
+    display: inline-block;
+    margin: 0px 5px;
+}  
+    
+    #section_thrid{ flex-direction: column; padding: 3vw; height: auto; margin-bottom: 10vh;  }
+    
+    .sec_thrid_left{ width: auto; }
+    .sec_thrid_right{ width: auto; margin-right: auto; }
+    
+    #section_thrid .sec_thrid_left h3{ font-size: 2rem; line-height: 2.5rem;  }
+    .heading_fec_sec{ margin-bottom: auto; }
+    
+    .feature_img{ display: none !important; }
+    .feature_sec_r_main{ padding: 3vh; }
+    
+    .feature_sec_r_main{ flex-direction: column; align-items: self-start;  }
+    .fec_sec_right h4{ text-align: left; }
+    .fec_sec_right p{ text-align: left; }
+    .fec_sec_left h3{ font-size: 2.5rem; margin-bottom: 10px;  }
+    .fec_sec_right h4{ font-size: 1.25rem; }
+    .sf_dpe{ flex-direction: column-reverse; }
+    .s_f_l_big h3{ font-size: 2.75rem; }
+    #who_we_work{ padding-top: 5vh; }
+    .who_we_wk_main{ margin-top: 4vh; }
+    .who_we_wk_main .w_w_w_con{ padding:  0vh 3vh; }
+    .footer_first{ flex-direction: column;  gap: 5vh; margin-bottom: 5vh;   }
+    .footer_heading_shadow h2{ font-size: 20vw; }
+    .footer_address_loc_main{ flex-wrap: wrap; }
+    .f_a_l_div{ flex-basis: 50%; font-size: 1rem; line-height: 2rem;  }
+}
+
+
+
+
  
