@@ -992,3 +992,80 @@ body{ overflow-x: hidden; }
     
     
 }
+
+@media (max-width: 768px) {
+     #page1 h1{ font-size: 2.5rem; line-height: 2.5rem;   }
+    #page1 h1 i{ display: none; }
+    #page1 p{ font-size: 2vh; line-height: 2.5vh; width: 90%; margin-bottom: 1vh;   }
+    #page1{ height: auto; padding-bottom: 3rem; }
+    #layout-gride-thrid-fold{  grid-template-columns: 1fr; }
+    #moving-div{ margin-top: 5vh; }
+    .fddp_heading h3{ font-size: 1.5rem; }
+    .fddp_heading p{ font-size: 0.75rem; }
+    .fddf_r_b_heading h3{ font-size: 1.25rem; }
+    .fddf_r_b_heading p{ font-size: 0.85rem; }
+    .os_list > .footer_os_div{ flex-basis: 100%; }
+    .footer_os_div a{ margin-bottom: 5px; font-size: 15px;  }
+    .dpdp_right p{ font-size: 0.75rem; line-height: 1rem; }
+    .dpdp_left h3{ font-size: 2rem; line-height: 2rem;  }
+    .ss-t-s-heading h4{ font-size: 1.25rem; letter-spacing: 0px;  }
+    .ss-t-s-left p{ font-size: 0.6rem; }
+    .ss-r-heading p{ font-size: 1rem; }
+    .ss-l-heading h3{ font-size: 2rem; line-height: 2rem; }
+    .lgt-g-heading{ letter-spacing: 0px; }
+    .lgt-grid{ height: auto; }
+    .lgt-g-para p{ font-size: 1rem; }
+    #layout-gride-thrid-fold .lgt-grid{ padding: 5vw; }
+    #moving-div{ position: relative; }
+    .ss-main-two{ flex-direction: column; }
+    .dpdp_first_main{ flex-direction: column; }
+    .fddp_section{ flex-direction: column; }
+    #digitalProductDesignServices{ flex-direction: column; }
+    .dpdp_second_main{ flex-direction: column; }
+    .ss-main{ flex-direction: column; }
+    .dpds-left a{ position: static;margin-bottom: 4rem;  }
+    .dpds-left{ padding-top: 5vw; padding-bottom: 5vw; margin-bottom: 2rem;  }
+    .summary-main-heading h3{ letter-spacing: 0px; }
+    .dpdp_s_m_div_sec{ border: none; }
+    .dpdp_s_m_div_third{ border: none; }
+    .dpdp_s_m_div_four{ border: none; }
+    .fddp_cta a{ position: static; margin: 5rem 0rem; }
+    .fddp_cta{ margin-bottom: 4rem; margin-top: 4rem; }
+    .fddp_right{ flex-direction: column; }
+    .fddp_right .fddf_r_block{ width: 100%; }
+    .fddp_heading h3{ width: 90vw; }
+    .fddp_heading p{ width: 90vw; }
+    #page3{ height: 35vh; }
+    .lgt-g-heading{ font-size: 1.25rem; }
+    .lgt-g-heading{ padding-right: 0vw; margin-bottom: 2rem;  }
+    .dpds-left a{ padding: 1rem 2rem; }
+    .dpds-l-h i{ display: none; }
+    .dpds-l-h h4{ font-size: 1.25rem; }
+    .ol_main{ flex-direction: column; }
+    .ol_address h3{ letter-spacing: 0px; font-size: 1.25rem; margin-bottom: 1rem; }
+    .ol_let_connect a{ padding: 0.5rem 1rem; margin-bottom: 1rem; }
+    .ol_main, .os_main{ padding: 1.75rem; }
+    #our_services{ padding-top: 2rem; }
+    .dpds-l-h{ flex-direction: column; }
+    .dpds-r-heading-para p{ font-size: 1rem; }
+    .dpds-r-heading-para h3{ font-size: 2.25rem;}
+    .digitalProductSec>p{ font-size: 1rem; }
+    .digitalProductSec h2{ font-size: 1.75rem; }
+    .dps-button a{ font-size: 0.85rem; }
+    .summary-main-heading h3{ font-size: 1.5rem; padding-top: 10px; }
+    
+    body{ overflow-x: hidden; }
+    .page1_heading{ margin-top: 8rem; }
+    #main{ overflow-y: hidden; }
+    nav button i{ padding: 6px 10px; }
+    nav{ padding: 1rem 0.75rem; }
+    #layout-gride-thrid-fold{ width: 100%; overflow-y: hidden; }
+    .dpdp_s_m_div_sec{ width: 100%; overflow-y: hidden;  }
+    body{ width: 100%; overflow-x: hidden;  }
+ 
+    
+}
+
+
+
+ 
